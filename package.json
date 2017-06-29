@@ -20,6 +20,8 @@
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
-    "graphql": "^0.10.3"
+    "base-64": "^0.1.0",
+    "graphql": "^0.10.3",
+    "react-apollo": "^1.4.2"
   }
 }
