@@ -8,6 +8,8 @@ import {
 } from 'react-apollo'
 import githubToken from './config'
 
+
+// TODO: move, clean
 const networkInterface = createNetworkInterface({
   uri: 'https://api.github.com/graphql',
 })

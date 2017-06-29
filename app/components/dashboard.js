@@ -2,22 +2,29 @@ import React from 'react'
 import { 
   graphql,
   gql, } from 'react-apollo'
+import GraphOne from './graphs/one'
 
 class Dashboard extends React.Component {
 
   render() {
-    console.log(this.props)
     return (
         <div>
-          Hello World!
+          <GraphOne />
         </div>
     )
   } 
 }
 
-
-export default graphql(gql`query{ 
+export default graphql(gql`{
   repository(owner: "facebook", name: "react") {
-    id
+    pullRequests(last: 50) {
+      nodes {
+      	comments(last: 50) {
+          nodes {
+            publishedAt
+          }
+        }
+    	}
+    }
   }
 }`)(Dashboard)
