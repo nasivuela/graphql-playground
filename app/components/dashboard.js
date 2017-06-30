@@ -11,11 +11,11 @@ class Dashboard extends React.Component {
   //TODO: catch graphQL errors
   render() {
     return (
-        <div>
+        <div className="main">
           <header>
             <h1>GraphQL playground</h1>
           </header>
-          {this.props.data.organization && <div>
+          {this.props.data.organization && <div className="container-graph">
             <GraphOne 
               data={organizationLanguagesPlumb(this.props.data.organization.repositories.nodes)} 
             />
