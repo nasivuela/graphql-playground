@@ -26,6 +26,12 @@ module.exports = {
 
   module: {
     rules: [
+      { test: /\.css$/, 
+        use: [
+          'style-loader?sourceMap',
+          'css-loader?modules&importLoaders=2&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+        ]
+      },
       {
         test : /\.js?/,
         exclude: [/node_modules/],
