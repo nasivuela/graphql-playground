@@ -40,6 +40,7 @@ module.exports = {
               plugins: [
                 'transform-class-properties',
                 'syntax-object-rest-spread',
+                'transform-object-rest-spread',
               ]
             }
           },

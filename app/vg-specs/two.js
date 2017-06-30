@@ -2,12 +2,16 @@ import React, { PropTypes } from 'react';
 import {createClassFromLiteSpec} from 'react-vega-lite';
 
 export default createClassFromLiteSpec('BarChart', {
-  "description": "Comparative of facebook repositories main languages.",
-  "mark": "bar",
+  "description": "Amount of PRs on facebook by language.",
+  "mark": "line",
   "encoding": {
     "y": {
+      "field": "pullRequestsCount",
       "type": "quantitative",
-      "aggregate": "count"
+      "aggregate": "sum",
+      "axis": {
+        "title": "PRs"
+      }
    },
     "x": {
       "field": "primaryLanguage", 

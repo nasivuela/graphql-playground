@@ -1,14 +1,8 @@
 # Node modules
 node_modules/
 
-
 # Generated files
 dist/
 
 # IDLE
 .vscode
-<<<<<<< HEAD
-=======
-
-config.js
->>>>>>> Add react-apollo and github auth
